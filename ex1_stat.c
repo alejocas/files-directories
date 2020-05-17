@@ -24,9 +24,6 @@ int main(int argc, char *argv[]) {
     }
     stat_t statObj;
     stat_t *pointerStatObj = &statObj;
-    //int stat(const char *pathname, struct stat *statbuf);
-    //printf("Buffer size: %d\n", (int) sizeof(buffer));
-    //int fileSize = read(fd, buffer, (int) sizeof(buffer));
     int statStatus = stat(argv[1], pointerStatObj);
     if(statStatus == 0) {
         printf("[stat personalizado]\nNombre de fichero: %s\n", argv[1]);
